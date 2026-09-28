@@ -5,6 +5,7 @@
    body {
     margin: 0;
     padding: 0;
+  
     background-color: #ffffff;
     color: #333333;
   
@@ -37,19 +38,24 @@
   
   .profile-table {
     width: 100%;
+  
     border: 0;
     border-spacing: 0;
   }
   
   .profile-text {
-    padding: 2.5%;
     width: 66%;
+  
+    padding: 2.5%;
+  
     vertical-align: middle;
   }
   
   .profile-image-cell {
-    padding: 2.5%;
     width: 34%;
+  
+    padding: 2.5%;
+  
     vertical-align: middle;
     text-align: center;
   }
@@ -67,17 +73,19 @@
     letter-spacing: -0.8px;
   
     color: #111827;
+  
     text-align: left;
   }
   
   .intro {
     margin: 0;
   
-    color: #444;
+    color: #444444;
   }
   
   .intro strong {
-    color: #222;
+    color: #222222;
+  
     font-weight: 600;
   }
   
@@ -88,6 +96,7 @@
   
   a {
     color: #1f5fa8;
+  
     text-decoration: none;
   
     transition: color 0.15s ease;
@@ -95,18 +104,22 @@
   
   a:hover {
     color: #0b376d;
+  
     text-decoration: underline;
   }
   
   .links {
     margin-top: 20px;
+  
     text-align: left;
+  
     font-weight: 500;
   }
   
   .links span {
-    color: #aaa;
     margin: 0 6px;
+  
+    color: #aaaaaa;
   }
   
   
@@ -117,6 +130,7 @@
   .profile-image {
     width: 210px;
     max-width: 100%;
+  
     aspect-ratio: 1 / 1;
   
     object-fit: cover;
@@ -146,15 +160,17 @@
      ========================= */
   
   .section {
-    padding: 18px 20px 10px 20px;
+    padding: 22px 20px 10px 20px;
   }
   
   .section h2 {
-    margin: 0 0 22px 0;
+    margin: 0 0 18px 0;
+  
     padding-bottom: 8px;
   
     font-size: 23px;
     font-weight: 600;
+    letter-spacing: -0.3px;
   
     color: #1f2937;
   
@@ -163,47 +179,246 @@
   
   
   /* =========================
-     Education
+     Publications
      ========================= */
   
-  .education-item {
-    margin-bottom: 24px;
-    padding-left: 14px;
+  .empty-publication {
+    padding-bottom: 10px;
   
-    border-left: 3px solid #dbe7f5;
+    color: #999999;
+  
+    font-size: 14px;
+    font-style: italic;
+  }
+  
+  
+  /* =========================
+     Research Interests
+     ========================= */
+  
+  .simple-list {
+    margin: 0;
+  
+    padding-left: 22px;
+  
+    color: #444444;
+  }
+  
+  .simple-list li {
+    margin-bottom: 6px;
+  }
+  
+  
+  /* =========================
+     CV Style
+     Education / Experience / Awards
+     ========================= */
+  
+  .cv-item {
+    display: flex;
+  
+    justify-content: space-between;
+    align-items: flex-start;
+  
+    gap: 32px;
+  
+    padding: 14px 0 17px 0;
+  
+    border-bottom: 1px solid #f0f1f3;
+  }
+  
+  .cv-item:last-child {
+    border-bottom: none;
+  }
+  
+  .cv-main {
+    flex: 1;
+  
+    min-width: 0;
+  }
+  
+  .cv-title {
+    margin-bottom: 3px;
+  
+    color: #111827;
+  
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .cv-subtitle {
+    margin-top: 1px;
+  
+    color: #374151;
+  
+    font-size: 15px;
+  }
+  
+  .cv-meta {
+    margin-top: 3px;
+  
+    color: #6b7280;
+  
+    font-size: 14px;
+  }
+  
+  .cv-date {
+    flex-shrink: 0;
+  
+    padding-top: 2px;
+  
+    color: #7c8798;
+  
+    font-size: 14px;
+  
+    text-align: right;
+  
+    white-space: nowrap;
+  }
+  
+  .cv-muted {
+    color: #6b7280;
+  
+    font-weight: 400;
+  }
+  
+  .cv-item.compact {
+    padding-top: 10px;
+    padding-bottom: 11px;
+  }
+  
+  
+  /* =========================
+     Legacy Education Classes
+     ========================= */
+  
+  /*
+     기존 education-item HTML을 아직 사용하는 경우를 위한 스타일.
+     HTML을 cv-item 구조로 변경했다면 삭제해도 됩니다.
+  */
+  
+  .education-item {
+    display: flex;
+  
+    justify-content: space-between;
+    align-items: flex-start;
+  
+    gap: 32px;
+  
+    margin: 0;
+  
+    padding: 14px 0 17px 0;
+  
+    border-bottom: 1px solid #f0f1f3;
+  }
+  
+  .education-item:last-child {
+    border-bottom: none;
   }
   
   .education-title {
+    color: #111827;
+  
     font-size: 16px;
     font-weight: 600;
-  
-    color: #222;
   }
   
   .education-detail {
     margin-top: 2px;
   
     color: #4b5563;
+  
+    font-size: 15px;
   }
   
   .education-date {
-    margin-top: 2px;
+    margin-top: 3px;
+  
+    color: #7c8798;
   
     font-size: 14px;
-    color: #888;
   }
   
   
   /* =========================
-     Publications
+     Research Experience
      ========================= */
   
-  .empty-publication {
-    color: #999;
-    font-size: 14px;
-    font-style: italic;
+  .experience-item {
+    margin-bottom: 20px;
   
-    padding-bottom: 10px;
+    padding: 0 0 16px 0;
+  
+    border-bottom: 1px solid #f0f1f3;
+  }
+  
+  .experience-item:last-child {
+    border-bottom: none;
+  }
+  
+  .experience-title {
+    color: #111827;
+  
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .experience-detail {
+    margin-top: 2px;
+  
+    color: #4b5563;
+  }
+  
+  .experience-date {
+    margin-top: 2px;
+  
+    color: #7c8798;
+  
+    font-size: 14px;
+  }
+  
+  
+  /* =========================
+     Awards
+     ========================= */
+  
+  .award-item {
+    display: flex;
+  
+    justify-content: space-between;
+    align-items: flex-start;
+  
+    gap: 30px;
+  
+    padding: 10px 0 11px 0;
+  
+    border-bottom: 1px solid #f0f1f3;
+  
+    color: #444444;
+  }
+  
+  .award-item:last-child {
+    border-bottom: none;
+  }
+  
+  .award-item strong {
+    color: #111827;
+  
+    font-weight: 600;
+  }
+  
+  .award-date {
+    flex-shrink: 0;
+  
+    padding-top: 1px;
+  
+    color: #7c8798;
+  
+    font-size: 14px;
+  
+    text-align: right;
+  
+    white-space: nowrap;
   }
   
   
@@ -222,6 +437,7 @@
       display: block;
   
       width: auto;
+  
       padding: 15px 24px;
     }
   
@@ -234,8 +450,9 @@
     }
   
     .name {
-      text-align: center;
       font-size: 30px;
+  
+      text-align: center;
     }
   
     .links {
@@ -245,5 +462,30 @@
     .section {
       padding-left: 24px;
       padding-right: 24px;
+    }
+  
+    .cv-item {
+      display: block;
+  
+      padding-top: 12px;
+      padding-bottom: 14px;
+    }
+  
+    .cv-date {
+      margin-top: 5px;
+  
+      padding-top: 0;
+  
+      text-align: left;
+    }
+  
+    .award-item {
+      display: block;
+    }
+  
+    .award-date {
+      margin-top: 4px;
+  
+      text-align: left;
     }
   }
