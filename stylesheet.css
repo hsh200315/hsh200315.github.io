@@ -210,282 +210,118 @@
   
   
   /* =========================
-     CV Style
-     Education / Experience / Awards
-     ========================= */
-  
-  .cv-item {
-    display: flex;
-  
-    justify-content: space-between;
-    align-items: flex-start;
-  
-    gap: 32px;
-  
-    padding: 14px 0 17px 0;
-  
-    border-bottom: 1px solid #f0f1f3;
+   Education
+   ========================= */
+
+.education-item {
+  margin-bottom: 24px;
+  padding-left: 14px;
+
+  border-left: 3px solid #dbe7f5;
+}
+
+.education-title {
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #222;
+}
+
+.education-detail {
+  margin-top: 2px;
+
+  color: #4b5563;
+}
+
+.education-date {
+  margin-top: 2px;
+
+  font-size: 14px;
+  color: #888;
+}
+
+
+/* =========================
+   Honors & Awards
+   ========================= */
+
+.awards-section {
+  margin-top: 8px;
+}
+
+.award-list {
+  padding: 0 2px;
+}
+
+.award-row {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  padding: 7px 0;
+}
+
+.award-dot {
+  width: 5px;
+  height: 5px;
+
+  margin-top: 8px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background-color: #8ba9cc;
+}
+
+.award-content {
+  flex: 1;
+
+  line-height: 1.45;
+}
+
+.award-title {
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #252525;
+}
+
+.award-note {
+  margin-left: 6px;
+
+  font-size: 13px;
+
+  color: #8a8a8a;
+}
+
+.award-date {
+  flex-shrink: 0;
+
+  padding-top: 1px;
+
+  font-size: 13px;
+
+  color: #999999;
+
+  white-space: nowrap;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+  .award-row {
+    flex-wrap: wrap;
   }
-  
-  .cv-item:last-child {
-    border-bottom: none;
-  }
-  
-  .cv-main {
-    flex: 1;
-  
-    min-width: 0;
-  }
-  
-  .cv-title {
-    margin-bottom: 3px;
-  
-    color: #111827;
-  
-    font-size: 16px;
-    font-weight: 600;
-  }
-  
-  .cv-subtitle {
-    margin-top: 1px;
-  
-    color: #374151;
-  
-    font-size: 15px;
-  }
-  
-  .cv-meta {
-    margin-top: 3px;
-  
-    color: #6b7280;
-  
-    font-size: 14px;
-  }
-  
-  .cv-date {
-    flex-shrink: 0;
-  
-    padding-top: 2px;
-  
-    color: #7c8798;
-  
-    font-size: 14px;
-  
-    text-align: right;
-  
-    white-space: nowrap;
-  }
-  
-  .cv-muted {
-    color: #6b7280;
-  
-    font-weight: 400;
-  }
-  
-  .cv-item.compact {
-    padding-top: 10px;
-    padding-bottom: 11px;
-  }
-  
-  
-  /* =========================
-     Legacy Education Classes
-     ========================= */
-  
-  /*
-     기존 education-item HTML을 아직 사용하는 경우를 위한 스타일.
-     HTML을 cv-item 구조로 변경했다면 삭제해도 됩니다.
-  */
-  
-  .education-item {
-    display: flex;
-  
-    justify-content: space-between;
-    align-items: flex-start;
-  
-    gap: 32px;
-  
-    margin: 0;
-  
-    padding: 14px 0 17px 0;
-  
-    border-bottom: 1px solid #f0f1f3;
-  }
-  
-  .education-item:last-child {
-    border-bottom: none;
-  }
-  
-  .education-title {
-    color: #111827;
-  
-    font-size: 16px;
-    font-weight: 600;
-  }
-  
-  .education-detail {
-    margin-top: 2px;
-  
-    color: #4b5563;
-  
-    font-size: 15px;
-  }
-  
-  .education-date {
-    margin-top: 3px;
-  
-    color: #7c8798;
-  
-    font-size: 14px;
-  }
-  
-  
-  /* =========================
-     Research Experience
-     ========================= */
-  
-  .experience-item {
-    margin-bottom: 20px;
-  
-    padding: 0 0 16px 0;
-  
-    border-bottom: 1px solid #f0f1f3;
-  }
-  
-  .experience-item:last-child {
-    border-bottom: none;
-  }
-  
-  .experience-title {
-    color: #111827;
-  
-    font-size: 16px;
-    font-weight: 600;
-  }
-  
-  .experience-detail {
-    margin-top: 2px;
-  
-    color: #4b5563;
-  }
-  
-  .experience-date {
-    margin-top: 2px;
-  
-    color: #7c8798;
-  
-    font-size: 14px;
-  }
-  
-  
-  /* =========================
-     Awards
-     ========================= */
-  
-  .award-item {
-    display: flex;
-  
-    justify-content: space-between;
-    align-items: flex-start;
-  
-    gap: 30px;
-  
-    padding: 10px 0 11px 0;
-  
-    border-bottom: 1px solid #f0f1f3;
-  
-    color: #444444;
-  }
-  
-  .award-item:last-child {
-    border-bottom: none;
-  }
-  
-  .award-item strong {
-    color: #111827;
-  
-    font-weight: 600;
-  }
-  
+
   .award-date {
-    flex-shrink: 0;
-  
-    padding-top: 1px;
-  
-    color: #7c8798;
-  
-    font-size: 14px;
-  
-    text-align: right;
-  
-    white-space: nowrap;
+    width: 100%;
+
+    margin-left: 15px;
+
+    font-size: 12.5px;
   }
-  
-  
-  /* =========================
-     Mobile
-     ========================= */
-  
-  @media (max-width: 650px) {
-  
-    .main-container {
-      margin-top: 20px;
-    }
-  
-    .profile-text,
-    .profile-image-cell {
-      display: block;
-  
-      width: auto;
-  
-      padding: 15px 24px;
-    }
-  
-    .profile-image-cell {
-      text-align: center;
-    }
-  
-    .profile-image {
-      width: 170px;
-    }
-  
-    .name {
-      font-size: 30px;
-  
-      text-align: center;
-    }
-  
-    .links {
-      text-align: center;
-    }
-  
-    .section {
-      padding-left: 24px;
-      padding-right: 24px;
-    }
-  
-    .cv-item {
-      display: block;
-  
-      padding-top: 12px;
-      padding-bottom: 14px;
-    }
-  
-    .cv-date {
-      margin-top: 5px;
-  
-      padding-top: 0;
-  
-      text-align: left;
-    }
-  
-    .award-item {
-      display: block;
-    }
-  
-    .award-date {
-      margin-top: 4px;
-  
-      text-align: left;
-    }
-  }
+}
